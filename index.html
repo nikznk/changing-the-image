@@ -13,9 +13,17 @@
 
         
         <script>
+             let imageurl = "https://placebear.com/g/200/300"; //new image 
+             let imageurl2 = ""; //variable to store old image
+             let image = document.getElementById('theImage'); // image 
+
              function pictureChange()
              {
-             document.getElementById('theImage').src="https://placebear.com/g/200/300";
+              imageurl2 = image.src; //store current image in variable
+
+              image.src= imageurl; //change the image to imageurl
+              
+              imageurl = imageurl2; //swap imageurl with old image 
              }
         </script>
     
